@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="css/style.css">
+
+        <title>Financeirix</title>
+    </head>
+    <body>
+        
+        <div id="container">
+            <input type="number" id="saldo" disabled value="0">
+            <div id="area-adicionar">
+                <div class="popup" id="popUpDinheiro">
+                    <h3 style="text-align: center;">Adicionar Dinheiro</h3>
+
+                    <input type="number" id="adicionarSaldo" />
+                    <div id="Botao-adicionar-dinheiro" onclick="adicionarSaldo()">
+                        Adicionar dinheiro
+                    </div>
+                </div>
+                <input class="botao-adicionar" type="submit" id="botao-Despesa" onclick="adicionarDespesa()" value="Adicionar Despesa">
+                <input class="botao-adicionar" type="submit" id="botao-Dinheiro" onclick="adicionarDinheiro()" value="Adicionar Dinheiro">
+            </div>
+        </div>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>

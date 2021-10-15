@@ -1,0 +1,83 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    color: #7F7C82;
+    background: #BFA2DB;
+}
+
+h3{
+    font-size: 24px;
+}
+
+#container{
+    padding: 10px;
+    width: 50%;
+    background: #BFA2DB;
+    border-radius: 10px;
+    
+}
+
+.popup {
+    background: #F0D9FF;
+    margin: 30px 20px;
+    padding: 15px;
+    width: 500px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#adicionarSaldo{
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid #F0D9FF;
+}
+
+#popUpDinheiro{
+    display: none;
+}
+
+#Botao-adicionar-dinheiro {
+    border: 1px solid #F3F1F5;
+    color: #F3F1F5;
+    font-size: 20px;
+    background: #7F7C82;
+    cursor: pointer;
+    padding: 10px;
+    width: 185px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+#saldo {
+    background: #F3F1F5;
+    border: 1px solid #BFA2DB;
+    border-radius: 10px;
+    text-align: end;
+    width: 200px;
+    height: 30px;
+    font-size: 18px;
+}
+
+.botao-adicionar, .botao-adicionar:hover{
+    text-align: center;
+    margin: 20px;
+    border-radius: 10px;
+    border: 1px solid #BFA2DB;
+    padding: 10px;
+    color: #7F7C82;
+    background: #F3F1F5;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#area-adicionar{
+    /*background: #393E46;*/
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
