@@ -12,6 +12,7 @@
     <body>
         
         <div id="container">
+            <h1><span style="color: #6c5481;">Finan</span>ceirix</h1>
             <input type="number" id="saldo" disabled value="0">
             <div id="area-adicionar">
                 <div class="popup" id="popUpDinheiro">
@@ -21,10 +22,101 @@
                     <div id="Botao-adicionar-dinheiro" onclick="adicionarSaldo()">
                         Adicionar dinheiro
                     </div>
+                    <div id="Botao-Cancelar" onclick="cancelar()">
+                        Cancelar
+                    </div>
+                </div>
+
+                <div class="popup" id="popUpDespesa">
+                    <h3 style="text-align: center;">Adicionar Despesa</h3>
+
+                    <p>Titulo</p>
+                    <input type="text" id="titulo-despesa">
+                    <p>Preço</p>
+                    <input type="number" id="preco-despesa">
+                    <p>Data</p>
+                    <input type="date" id="data-despesa">
+
+                    <div id="adicionar-despesa" onclick="capturarDespesa()">
+                        Adicionar Despesa
+                    </div>
+
+                    <div id="Botao-Cancelar" onclick="cancelar()">
+                        Cancelar
+                    </div>
+                    
                 </div>
                 <input class="botao-adicionar" type="submit" id="botao-Despesa" onclick="adicionarDespesa()" value="Adicionar Despesa">
                 <input class="botao-adicionar" type="submit" id="botao-Dinheiro" onclick="adicionarDinheiro()" value="Adicionar Dinheiro">
             </div>
+            <hr color="#fff" size="1">
+
+            <div id="filtro-anual">
+                <label for="">Filtrar por ano</label>
+                <select name="" id="filtro-ano">
+                    <option value="2019">2019</option>
+                    <option value="2020">2020</option>
+                    <option value="2021">2021</option>
+                </select>
+            </div>
+            <br><br>
+
+            <div id="todos-meses">
+                <div id="mes-jan">
+                    <div class="preenchimento-mes" style="background: purple; height: 100px; width: 19px;"></div>
+                    jan
+                </div>
+                <div id="mes-fev">
+                    <div class="preenchimento-mes" style="background: purple; height: 100px; width: 19px;"></div>
+                    fev
+                </div>
+                <div id="mes-mar">
+                    <div class="preenchimento-mes" style="background: purple; height: 100px; width: 19px;"></div>
+                    mar
+                </div>
+                <div id="mes-abr">
+                    <div class="preenchimento-mes" style="background: purple; height: 100px; width: 19px;"></div>
+                    abr
+                </div>
+                <div id="mes-mai">
+                    <div class="preenchimento-mes" style="background: purple; height: 100px; width: 19px;"></div>
+                    mai
+                </div>
+                <div id="mes-jun">
+                    <div class="preenchimento-mes" style="background: purple; height: 100px; width: 19px;"></div>
+                    jun
+                </div>
+                <div id="mes-jul">
+                    <div class="preenchimento-mes" style="background: purple; height: 100px; width: 19px;"></div>
+                    jul
+                </div>
+                <div id="mes-ago">
+                    <div class="preenchimento-mes" style="background: purple; height: 100px; width: 19px;"></div>
+                    ago
+                </div>
+                <div id="mes-set">
+                    <div class="preenchimento-mes" style="background: purple; height: 100px; width: 19px;"></div>
+                    set
+                </div>
+                <div id="mes-out">
+                    <div class="preenchimento-mes" style="background: purple; height: 100px; width: 19px;"></div>
+                    out
+                </div>
+                <div id="mes-nov">
+                    <div class="preenchimento-mes" style="background: purple; height: 100px; width: 19px;"></div>
+                    nov
+                </div>
+                <div id="mes-dez">
+                    <div class="preenchimento-mes" style="background: purple; height: 100px; width: 19px;"></div>
+                    dez
+                </div>
+            </div>
+
+            <br><hr color="#fff" size="1">
+            <div id="historico">
+
+            </div>
+
         </div>
 
         <script src="js/main.js"></script>
