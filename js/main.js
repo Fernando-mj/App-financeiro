@@ -73,10 +73,10 @@ function filtrar(ano) {
   console.log("cheguei aqui");
   despesaFiltrada = despesa.filter(e => e.data.includes(ano));
 
-  let despesas;
-  despesaFiltrada.forEach (e => {
-    despesas += "<div class=\"card\"><h1>"+e.data+" foi gasto R$"+e.preco+" reais em "+e.titulo+"</h1></div>";
-  });
+  // let despesas;
+  // despesaFiltrada.forEach (e => {
+  //   despesas += "<div class=\"card\"><h1>"+e.data+" foi gasto R$"+e.preco+" reais em "+e.titulo+"</h1></div>";
+  // });
 
-  document.getElementById("historico").innerHTML = despesas;
+  // document.getElementById("historico").innerHTML = despesas;
 }
