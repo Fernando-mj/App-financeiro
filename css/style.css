@@ -49,8 +49,9 @@ h3{
     align-items: center;
 }
 
-#adicionarSaldo{
+#adicionarSaldo, #titulo-despesa, #preco-despesa, #data-despesa{
     width: 200px;
+    padding: 5px;
     height: 30px;
     border-radius: 10px;
     border: 1px solid #193498;
@@ -80,6 +81,7 @@ h3{
 
 #saldo {
     background: #F3F1F5;
+    color: #181818;
     border: 1px solid #193498;
     border-radius: 10px;
     text-align: end;
@@ -124,7 +126,36 @@ h3{
 
 .preenchimento-mes {
     border-radius: 10px;
+    width: 19px; 
+    height: 100%;
+    background: #193498;
+}
+/* #mes-jan, #mes-fev, #mes-mar, #mes-abr, #mes-mai, #mes-jun, #mes-jul, #mes-ago, #mes-set, #mes-out, #mes-nov, #mes-dez {
+    border-radius: 10px;
     width: 19px;
-    background: #193498; 
+    height: 20%;
+    background: #193498;
+} */
+
+.parte-branca-mes {
+    border-radius: 10px;
+    width: 19px;
     height: 100px;
+    background: #fff;
+}
+
+#historico {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #1597E5;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    padding: 10px;
 }

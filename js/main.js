@@ -29,9 +29,14 @@ function adicionarSaldo () {
   document.getElementById("saldo").value = tudo;
 };
 
-let despesa = [0, 2];
-despesa.length = 2;
-despesa[1] = 0
+// if(document.getElementById('saldo').value < 1){
+//   document.getElementById('saldo').style.color = "#fc7272";
+// } else{
+//   document.getElementById('saldo').style.color = "#181818";
+// }
+
+let despesa = [];
+
 function capturarDespesa() {
   // var capturarTitulo = "";
   // var capturarValor = "";
@@ -42,12 +47,20 @@ function capturarDespesa() {
   let novaDespesa = {
     titulo: "",
     preco: 0.00,
-    data: ""
+    data: "",
+    dia: "",
+    mes: "",
+    ano: ""
   }
 
   novaDespesa.titulo = document.getElementById("titulo-despesa").value;
   novaDespesa.preco = document.getElementById("preco-despesa").value;
-  novaDespesa.data = document.getElementById("data-despesa").value;
+  let data = document.getElementById("data-despesa").value.toLocaleString("pt-BR", { month: "short"});
+
+  novaDespesa.data = data;
+  novaDespesa.dia = new Date(data).getDate();
+  novaDespesa.mes = new Date(data).getMonth();
+  novaDespesa.ano = new Date(data).getFullYear();
 
   despesa.push(novaDespesa);
 
@@ -58,10 +71,17 @@ function capturarDespesa() {
   historicoDespesa(novaDespesa);
 };
 
+/* MODIFICAR O PREENCHIMENTO DO MÊS
+document.getElementById("mes-jan").style.height = '40%';
+*/
+
+
 function historicoDespesa(e){
-  document.getElementById("historico").innerHTML += " <div class=\"card\"><h1>"+e.data+" foi gasto R$"+e.preco+" reais em "+e.titulo+"</h1></div>";
+  document.getElementById("historico").innerHTML += "<div class=\"card\"><p>"+e.data+" foi gasto R$"+e.preco+" reais em <strong>"+e.titulo+"</strong></p></div>";
 
 }
+
+
 
 let filtro = document.getElementById("filtro-ano");
 
@@ -70,13 +90,15 @@ filtro.addEventListener('change', (e) => {
 });
 
 function filtrar(ano) {
-  console.log("cheguei aqui");
-  despesaFiltrada = despesa.filter(e => e.data.includes(ano));
 
-  // let despesas;
-  // despesaFiltrada.forEach (e => {
-  //   despesas += "<div class=\"card\"><h1>"+e.data+" foi gasto R$"+e.preco+" reais em "+e.titulo+"</h1></div>";
-  // });
-
-  // document.getElementById("historico").innerHTML = despesas;
+  let despesasFiltrada = despesa.filter((e) => e.ano == ano);
+ 
+  if(despesasFiltrada.length === 0) {
+    document.getElementById("historico").innerHTML = "Não tem nada";
+  } else {
+    document.getElementById("historico").innerHTML = "";
+    for(i = 0; i < despesasFiltrada.length; i++) {
+      document.getElementById("historico").innerHTML += "<div class=\"card\"><p>"+despesasFiltrada[i].data+" foi gasto R$"+despesasFiltrada[i].preco+" reais em <strong>"+despesasFiltrada[i].titulo+"</strong></p></div>";
+    }
+  }
 }
